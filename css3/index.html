@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>CSS</title>
+	<link rel="stylesheet" href="scss/ex.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="../markup/js/ui.js"></script>
+</head>
+	
+<body>
+<div class="ex_wrap">
+    <header class="ex_header">
+        <h1>
+            <a href="../css3/index.html" class="atv">CSS</a>
+            <a href="../markup/index.html" target="_blank">Markup</a>
+        </h1>
+    </header>
+
+    <div class="ex_container">
+        <nav class="ex_nav">
+            <h2 class="blind">css3 예제 list</h2>
+            <ul class="ex_menu">
+                <li><a href="#btn_hover">btn - hover</a>
+                    <ul>
+                        <li>warning</li>
+                        <li>bg - slide / color</li>
+                        <li>btn more</li>
+                    </ul>
+                </li>
+                <li><a href="#switch_onoff">switch on and off</a></li>
+                <li><a href="#circle_box">circle effect</a></li>
+                <li><a href="#drawing">drawing</a></li>
+                <li><a href="#bar_graph">bar graph</a></li>
+                <li><a href="#loading">loading</a></li>
+                <li><a href="#sprite">img sprite</a></li>
+                <li><a href="#animation">animation</a></li>
+                <li><a href="#shape">shape</a></li>
+                <li><a href="#boxes">box effect</a>
+                    <ul>
+                        <li>translateY</li>
+                        <li>scale</li>
+                        <li>skewX</li>
+                    </ul>
+                </li>
+                <li><a href="#img_crop">img crop</a></li>
+                <li><a href="#img_srcset">img srcset</a></li>
+                <li><a href="#invert">invert</a></li>
+                <li><a href="#btn_more">btn more - click</a>
+                    <ul>
+                        <li>+ → - , 하나만 / 여러개</li>
+                        <li>∨ → ∧</li>
+                    </ul>
+                </li>
+                <li><a href="#tab">tab</a></li>
+                <li><a href="#form_field">form field</a></li>
+                <li><a href="#inline_margin0">inline-block</a></li>
+                <li><a href="#ellipsis">ellipsis</a></li>
+                <li><a href="#svg">svg</a></li>
+                <!--<li><a href="#"></a></li>-->
+            </ul> 
+        </nav>
+
+        <div class="ex_contents">
+            <section id="btn_hover">
+                <h3>btns - hover</h3>
+                <div class="ex_inner floating3">
+                    <h4><span>warning</span></h4>
+                    <button class="btn_warning">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <div class="ex_inner floating3">
+                    <h4><span>bg slide</span></h4>
+                    <div class="btn_box bg_slide">
+                        <button type="button" class="btn"><span>button</span></button>
+                        <a href="#" class="btn"><span>anchor</span></a>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>bg color</span></h4>
+                    <div class="btn_box bg_color">
+                        <button type="button" class="btn">button</button>
+                    </div>
+                </div>
+
+                <div class="ex_inner floating3 clear">
+                    <h4><span>more</span></h4>
+                    <div class="btn_more btn_more01">
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>more ∨ → ∧</span></h4>
+                    <div class="btn_more btn_more02">
+                        <button type="button" class="btn">더보기</button>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>more + → -</span></h4>
+                    <div class="btn_more btn_more03">
+                        <button type="button" class="btn">더보기</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="switch_onoff">
+                <h3>switch on and off</h3>
+                <div class="ex_inner">
+                    <div class="switch_box">
+                        <span class="item">
+                            <input type="checkbox" id="slider01">
+                            <label for="slider01" class="slider"></label>
+                        </span>
+                        <span class="item">
+                            <input type="checkbox" id="slider02" checked="checked">
+                            <label for="slider02" class="slider"></label>
+                        </span>
+                        <span class="item">
+                            <input type="checkbox" id="slider03">
+                            <label for="slider03" class="slider round"></label>
+                        </span>
+                        <span class="item">
+                            <input type="checkbox" id="slider04" checked="checked">
+                            <label for="slider04" class="slider round"></label>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="circle_box">
+                <h3>circle effect</h3>
+                <div class="ex_inner floating2">
+                    <h4><span>pulse</span></h4>
+                    <div class="map_box">
+                        <div class="map">지도 이미지 내 maker</div>
+                        <div class="marker_box">
+                            <span class="circle circle01"></span>
+                            <span class="circle circle02"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ex_inner floating2">
+                    <h4><span>bg shadow</span></h4>
+                    <div class="bg_shadow"></div>
+                </div>
+            </section>
+            
+            <section id="drawing">
+                <h3>drawing</h3>
+                <div class="ex_inner">
+                    <h4><span>rectangle</span></h4>
+                    <div class="draw_box">
+                        <span></span>
+                        <em>얍!</em>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="bar_graph">
+                <h3>bar graph</h3>
+                <div class="ex_inner">
+                    <h4><span>css3</span></h4>
+                    <div class="bar_graph" range="59">
+                        <div class="fill"></div>
+                        <span class="txt"><em></em> %</span>
+                    </div>
+                    <script>
+                    $(function(){
+                        var $bar_range = $(".bar_graph").attr("range"),
+                            $bar_fill = $(".bar_graph > .fill"),
+                            $bar_txt = $(".bar_graph > .txt > em");
+                        
+                        $bar_fill.stop().animate({width: $bar_range + "%"}, 500);
+                        $bar_txt.text($bar_range);
+                    });
+                    </script>
+                </div>
+            </section>
+            
+            <section id="loading">
+                <h3>loading</h3>
+                <div class="ex_inner floating2">
+                    <h4><span>font awesome</span></h4>
+                    <div class="awesome">
+                        <i class="fa fa-spinner fa-spin fa-fw fa-lg"></i> 
+                        <i class="fa fa-circle-o-notch fa-spin fa-fw fa-2x"></i>
+                        <i class="fa fa-refresh fa-spin fa-fw fa-3x"></i>  
+                        <i class="fa fa-cog fa-spin fa-fw fa-4x"></i> 
+                        <i class="fa fa-spinner fa-pulse fa-fw fa-5x"></i> 
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating2">
+                    <h4><span>svg</span></h4>
+                    <div class="loading">
+                        <svg class="spinner" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="sprite">
+                <h3>img sprite</h3>
+                <div class="ex_inner floating3">
+                    <h4><span>img sprite01</span></h4>
+                    <div class="sprite sprite01">
+                        <div class="character"></div>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>img sprite02</span></h4>
+                    <div class="sprite sprite02">
+                        <div class="character"></div>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>img sprite03</span></h4>
+                    <div class="sprite sprite03">
+                        <div class="character"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="animation">
+                <h3>animation</h3>
+                <div class="ex_inner floating3">
+                    <h4><span>wink</span></h4>
+                    <div class="wink">
+                        <div class="character"></div>
+                        <div class="star01"></div>
+                        <div class="star02"></div>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>wobble</span></h4>
+                    <div class="wobble_box">
+                        <div class="obj"></div>
+                        <div class="wobble">***</div>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>gooey</span></h4>
+                    <div class="gooey_box">
+                        <span class="txt">txt</span>
+                        <span class="arrow updown"><img src="img/icon_arrow.svg" alt="↗"></span>
+                        <span class="gooey"></span>
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating clear">
+                    <h4><span>scroll</span></h4>
+                    <div class="scroll_box">
+                    </div>
+                </div>
+            </section>
+            
+            <section id="shape">
+                <h3>shape</h3>
+                <div class="ex_inner floating4">
+                    <h4><span>flag</span></h4>
+					<div class="flag">1</div>
+                </div>
+                <div class="ex_inner floating4">
+                    <h4><span>말풍선01</span></h4>
+					<div class="talk_bubble01"><span>text</span></div>
+                </div>
+                <div class="ex_inner floating4">
+                    <h4><span>말풍선02</span></h4>
+					<div class="talk_bubble02"><span>text</span></div>
+                </div>
+				<div class="ex_inner floating4">
+                    <h4><span>하트</span></h4>
+					<div class="heart"></div>
+                </div>
+				<div class="ex_inner floating4 clear">
+					<h4><span>egg</span></h4>
+					<div class="egg"></div>
+				</div>
+				<div class="ex_inner floating4">
+					<h4><span>moon</span></h4>
+					<div class="moon"></div>
+				</div>
+			</section>
+			
+			<section id="">
+				<h3>shape - border</h3>
+                <div class="ex_inner">
+                    <h4><span>border sample</span></h4>
+					<div class="border_shape"></div>
+                </div>
+                <div class="ex_inner floating4 clear">
+                    <h4><span>삼각형 up</span></h4>
+					<div class="triangle up"></div>
+                </div>
+				<div class="ex_inner floating4">
+					<h4><span>삼각형 down</span></h4>
+					<div class="triangle down"></div>
+				</div>
+                <div class="ex_inner floating4">
+                    <h4><span>삼각형 left</span></h4>
+					<div class="triangle left"></div>
+                </div>
+				<div class="ex_inner floating4">
+					<h4><span>삼각형 right</span></h4>
+					<div class="triangle right"></div>
+				</div>
+				
+                <div class="ex_inner floating4 clear">
+                    <h4><span>삼각형 top left</span></h4>
+					<div class="triangle top_left"></div>
+                </div>
+				<div class="ex_inner floating4">
+					<h4><span>삼각형 top right</span></h4>
+					<div class="triangle top_right"></div>
+				</div>
+                <div class="ex_inner floating4">
+                    <h4><span>삼각형 bottom left</span></h4>
+					<div class="triangle btm_left"></div>
+                </div>
+				<div class="ex_inner floating4">
+					<h4><span>삼각형 bottom right</span></h4>
+					<div class="triangle btm_right"></div>
+				</div>
+				
+				<div class="ex_inner floating4 clear">
+					<h4><span>별 6point</span></h4>
+					<div class="star_six"></div>
+				</div>
+				<div class="ex_inner floating4">
+					<h4><span>별 5point</span></h4>
+					<div class="star_five"></div>
+				</div>
+                <div class="ex_inner floating4">
+                    <h4><span>리본</span></h4>
+					<div class="ribbon"></div>
+                </div>
+                <div class="ex_inner floating4">
+                    <h4><span>infinity</span></h4>
+					<div class="infinity"></div>
+                </div>
+            </section>
+            
+            <section id="boxes">
+                <h3>box effect</h3>
+                <div class="ex_inner floating2">
+                    <h4><span>hover시 transform: translateY(-5px);</span></h4>
+                    <ul class="box_type box_type01">
+                        <li class="box"><a href="#">box-shadow </a></li>
+                        <li class="box"><a href="#">노출을 위한</a></li>
+                        <li class="box"><a href="#">padding필요</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                    </ul>
+                </div>
+
+                <div class="ex_inner floating2">
+                    <h4><span>hover시 transform: scale(1.05);</span></h4>
+                    <ul class="box_type box_type02">
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                        <li class="box"><a href="#">box</a></li>
+                    </ul>
+                </div>
+
+                <div class="ex_inner clear">
+                    <h4><span>hover시 flex: 5; transform: skewX(0);</span></h4>
+                    <div class="box_type03">
+                        <div class="box box01">
+                            <p>pragraph1</p>
+                        </div>
+                        <div class="box box02">
+                            <p>pragraph22</p>
+                        </div>
+                        <div class="box box03">
+                            <p>pragraph333</p>
+                        </div>
+                        <div class="box box04">
+                            <p>pragraph4444</p>
+                        </div>
+                        <div class="box box05">
+                            <p>pragraph55555</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="img_crop">
+                <h3>img crop (height: 100%)</h3>
+                <div class="ex_inner floating3">
+                    <h4><span>정사이즈</span></h4>
+                    <div class="crop_box">
+                        <img src="img/crop.png">
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>좌우 짤림</span></h4>
+                    <div class="crop_box type02">
+                        <img src="img/crop.png">
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating3">
+                    <h4><span>좌우 여백</span></h4>
+                    <div class="crop_box type03">
+                        <img src="img/crop.png">
+                    </div>
+                </div>
+            </section>
+            
+            <section id="img_srcset">
+                <h3>img srcset</h3>
+                <div class="ex_inner">
+                    <h4><span>뷰포트 너비에 최적화된 이미지를 선택해 출력하기(1x, 2x, 3x)</span></h4>
+                    <div class="box">
+                        <img src="img/musical_img.png" srcset="img/musical_img@2x.png 2x, img/musical_img@3x.png 3x" alt="">
+                    </div>
+                </div>
+            </section>
+            
+            <section id="invert">
+                <h3>invert</h3>
+                <div class="ex_inner">
+                    <h4><span>html invert</span></h4>
+                    <div class="invert">
+                        <button type="button">button</button>
+                    </div>
+                </div>
+                <!-- .scss 내에 삽입 시 오류 발생하여 html파일 안에 추가함 -->
+                <style>
+                    html.invert_atv{
+                        -webkit-filter: invert();
+                        filter: progid:DXImageTransform.Microsoft.BasicImage(invert=1);
+                        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(invert=1)";
+                    }
+                </style>
+            </section>
+
+            <section id="btn_more">
+                <h3>btn more - click</h3>
+                <div class="ex_inner">
+                    <h4><span>+ → - , 하나만</span></h4>
+                    <ul class="accordion faq01">
+                        <li>
+                            <div class="title">
+                                <a href="javascript:void(0);" class="tit_txt">title</a>
+                            </div>
+                            <div class="desc">
+                                desc<br>desc<br>desc
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="javascript:void(0);" class="tit_txt">title</a>
+                            </div>
+                            <div class="desc">
+                                desc<br>desc<br>desc
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="javascript:void(0);" class="tit_txt">title</a>
+                            </div>
+                            <div class="desc">
+                                desc<br>desc<br>desc
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ex_inner">
+                    <h4><span>+ → - , 여러개 가능</span></h4>
+                    <ul class="accordion faq02">
+                        <li>
+                            <div class="title">
+                                <a href="javascript:void(0);" class="tit_txt">title</a>
+                            </div>
+                            <div class="desc">
+                                desc<br>desc<br>desc
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="javascript:void(0);" class="tit_txt">title</a>
+                            </div>
+                            <div class="desc">
+                                desc<br>desc<br>desc
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="javascript:void(0);" class="tit_txt">title</a>
+                            </div>
+                            <div class="desc">
+                                desc<br>desc<br>desc
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    accordion(".accordion.faq01 .title .tit_txt", 1);
+                    accordion(".accordion.faq02 .title .tit_txt", 2);
+                </script>
+            </section>
+
+            <section id="tab">
+                <h3>tab</h3>
+                <div class="ex_inner">
+                    <h4><span>tab 선택 시 좌우 border 1px</span></h4>
+                    <div class="tab_box">
+                        <ul class="tabs tabs01">
+                            <li class="atv"><a href="#tab01">border tab01</a></li>
+                            <li><a href="#tab02">border tab02</a></li>
+                            <li><a href="#tab03">border tab03</a></li>
+                            <li><a href="#tab04">border tab04</a></li>
+                        </ul>
+                        <div class="tab_con_wrap tab_con_wrap01">
+                            <div class="tab_con" id="tab01">tab_con01</div>
+                            <div class="tab_con" id="tab02">tab_con02</div>
+                            <div class="tab_con" id="tab03">tab_con03</div>
+                            <div class="tab_con" id="tab04">tab_con04</div>
+                        </div>
+                        
+                        <ul class="tabs tabs02">
+                            <li class="atv"><a href="#tab0201">together board tab01</a></li>
+                            <li><a href="#tab0202">together board tab02</a></li>
+                            <li><a href="#tab0203">together board tab03</a></li>
+                            <li><a href="#tab0204">together board tab04</a></li>
+                        </ul>
+                        <div class="tab_con_wrap tab_con_wrap02">
+                            <div class="tab_con" id="">together board tab_con01</div>
+                            <div class="tab_con" id="">together board tab_con02</div>
+                            <div class="tab_con" id="">together board tab_con03</div>
+                            <div class="tab_con" id="">together board tab_con04</div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    tab_box(".tabs01 > li > a", ".tab_con_wrap01 > .tab_con");
+                    tab_box(".tabs02 > li > a", ".tab_con_wrap02 > .tab_con");
+                </script>
+            </section>
+
+            <section id="form_field">
+                <h3>form field</h3>
+                <div class="ex_inner floating2">
+                    <h4><span>kakao</span></h4>
+                    <div class="kakao">
+                        <div class="box">
+                            <input type="text" class="txt_number" id="certify_number" placeholder="인증번호" value="">
+                            <label for="certify_number" class="txt_label">인증번호</label>
+                            <span class="txt_time">
+                                <span class="blind">남은시간</span>3:29
+                            </span>
+                        </div>
+                        <div class="box jumin">
+                            <input type="tel" class="txt_number jumin01" id="jumin01" placeholder="주민등록번호 앞자리" value="" maxlength="6">
+                            <span class="dash">-</span>
+                            <input type="tel" class="txt_number jumin02" id="jumin02" placeholder="주민등록번호 뒷자리" value="" maxlength="7">
+                            <label for="jumin01" class="txt_label">주민번호</label>
+                        </div>
+                    </div>
+                    <script>
+                    $(function(){
+                        var $jumin = $(".kakao .box.jumin"),
+                            $jumin01 = $(".kakao .jumin01"),
+                            $jumin02 = $(".kakao .jumin02");
+
+                        $jumin01.click(function() {
+                            $(this).putCursorAtEnd().on("focus", function() {$(this).putCursorAtEnd()});
+                        });
+                        $jumin01.on("keyup", function(){
+                            if ($(this).val().length == 6){
+                                $jumin.addClass("atv");
+                                $jumin02.focus();
+                            } else{
+                                if (!$jumin02.val()){
+                                    $jumin.removeClass("atv");
+                                }
+                            }
+                        });
+                    });
+                        
+                    //$jumin01를 터치할 경우, 포커스를 입력된 숫자의 맨 끝으로 보내기
+                    jQuery.fn.putCursorAtEnd = function(){
+                        return this.each(function(){
+                            var $el = $(this),
+                                el = this;
+
+                            if (!$el.is(":focus"))
+                                $el.focus();
+
+                            if (el.setSelectionRange){
+                                var len = $el.val().length * 2;
+
+                                setTimeout(function(){
+                                    el.setSelectionRange(len, len);
+                                }, 1);
+                            } else{
+                                $el.val($el.val());
+                            }
+
+                            this.scrollTop = 999999;
+                        });
+                    };
+                    </script>
+                </div>
+                    
+                <div class="ex_inner floating2">
+                    <h4><span>shinhan</span></h4> 
+                    <div class="shinhan">
+                        <div class="box user">
+                            <input type="text" class="" id="user_id" title="아이디 영문·숫자 4~16자리 입력" value="">
+                            <label for="user_id" class="user_id">아이디를 입력하세요.</label>
+                        </div>
+                        <div class="box srch">
+                            <label for="srch_txt"><img src="img/ico_search.png"></label>
+                            <input type="text" id="srch_txt" placeholder="검색어를 입력하면 X버튼이 노출됩니다.">
+                            <button type="reset" class="btn_clear"><span class="blind">삭제</span></button>
+                        </div>
+                    </div>
+                    <script>
+                    $(function(){
+                        var $txt = $(".shinhan .srch > input"),
+                            $btn_clear = $(".shinhan .srch > .btn_clear");
+                        $txt.on("input", function(){
+                            if ($txt.val() == "")
+                                $btn_clear.hide();
+                            else
+                                $btn_clear.show();
+                        });
+                        $btn_clear.on("click", function(){
+                            $txt.val("");
+                        });
+                    });
+                    </script>
+                </div>
+                
+                <div class="ex_inner floating2 clear">
+                    <h4><span>text security</span></h4>
+                    <div class="txt_security">
+                        <input type="number" pattern="[0-9]*" placeholder="input[type=number]">
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating2">
+                    <h4><span>password toggle</span></h4>
+                    <div class="pw_toggle">
+                        <input type="password" class="pw_input" placeholder="password">
+                        <button type="button" class="btn_pw_toggle" onclick="pw_show();">show</button>
+                    </div>
+                    <script>
+                        function pw_show() {
+                            const toggle_btn = document.querySelector(".pw_toggle > .btn_pw_toggle");
+                            const toggle_input = document.querySelector(".pw_toggle > .pw_input");
+                            if (toggle_input.type === "password") {
+                                toggle_input.type = "text";
+                                toggle_btn.innerText = "hide";
+                            } else {
+                                toggle_input.type = "password";
+                                toggle_btn.innerText = "show";
+                            }
+                        }
+                    </script>
+                </div>
+            </section>
+            
+            <section id="inline_margin0">
+                <h3>inline-block 좌우 여백 없음</h3>
+                <div class="ex_inner">
+                    <h4><span>element 가로 정렬</span></h4>
+                    <div class="inline_box">
+                        <div>div</div>
+                        <p>p</p>
+                        <span>span</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="ellipsis">
+                <h3>ellipsis</h3>
+                <div class="ex_inner floating2">
+                    <h4><span>singleline</span></h4>
+                    <div class="ellipsis_box singleline">
+                        singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline singleline
+                    </div>
+                </div>
+                
+                <div class="ex_inner floating2">
+                    <h4><span>multiline</span></h4>
+                    <div class="ellipsis_box multiline">
+                        IE에서는 안먹힘. multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline multiline
+                    </div>
+                </div>
+            </section>
+            
+            <section id="svg">
+                <h3>svg</h3>
+                <div class="ex_inner">
+                    <h4><span>preserveAspectRatio</span></h4>
+                    <div class="smail">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 92">
+                            <defs>
+                                <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+                            </defs>
+                            
+                            <!-- (width>height) meet -->
+                            <svg preserveAspectRatio="xMidYMid meet"  x="0"   y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMinYMid meet"  x="25"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMaxYMid meet"  x="50"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+
+                            <!-- (width>height) slice -->
+                            <svg preserveAspectRatio="xMidYMin slice" x="0"   y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMidYMid slice" x="25"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMidYMax slice" x="50"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
+
+                            <!-- (width<height) meet -->
+                            <svg preserveAspectRatio="xMidYMin meet"  x="75"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMidYMid meet"  x="90"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMidYMax meet"  x="105" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+
+                            <!-- (width<height) slice -->
+                            <svg preserveAspectRatio="xMinYMid slice" x="120" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMidYMid slice" x="135" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+                            <svg preserveAspectRatio="xMaxYMid slice" x="150" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
+
+                            <!-- none -->
+                            <svg preserveAspectRatio="none"           x="0"   y="30" viewBox="0 0 100 100" width="160" height="60"><use href="#smiley" /></svg>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ex_inner">
+                    <h4><span>snow</span></h4>
+                    <div class="snow_box">
+                        <div class="snow">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
+                                <g fill="#fff" fill-opacity=".15" transform="translate(55 42)">
+                                    <g id="snow_bottom_layer">
+                                        <ellipse cx="6" cy="1009.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="138" cy="1110.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="398" cy="1055.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="719" cy="1284.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="760" cy="1155.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="635" cy="1459.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="478" cy="1335.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="322" cy="1414.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="247" cy="1234.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="154" cy="1425.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="731" cy="773.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="599" cy="874.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="339" cy="819.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="239" cy="1004.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="113" cy="863.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="102" cy="1223.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="395" cy="1155.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="826" cy="943.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="626" cy="1054.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="887" cy="1366.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="6" cy="241.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="138" cy="342.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="398" cy="287.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="719" cy="516.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="760" cy="387.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="635" cy="691.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="478" cy="567.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="322" cy="646.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="247" cy="466.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="154" cy="657.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="731" cy="5.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="599" cy="106.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="339" cy="51.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="239" cy="236.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="113" cy="95.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="102" cy="455.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="395" cy="387.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="826" cy="175.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="626" cy="286.5" rx="6" ry="5.5"/>
+                                        <ellipse cx="887" cy="598.5" rx="6" ry="5.5"/>
+                                    </g>
+                                </g>
+                                <g fill="#fff" fill-opacity=".5" transform="translate(65 63)">
+                                    <g id="snow_top_layer">
+                                        <circle cx="8" cy="776" r="8"/>
+                                        <circle cx="189" cy="925" r="8"/>
+                                        <circle cx="548" cy="844" r="8"/>
+                                        <circle cx="685" cy="1115" r="8"/>
+                                        <circle cx="858" cy="909" r="8"/>
+                                        <circle cx="874" cy="1438" r="8" transform="rotate(180 874 1438)"/>
+                                        <circle cx="657" cy="1256" r="8" transform="rotate(180 657 1256)"/>
+                                        <circle cx="443" cy="1372" r="8" transform="rotate(180 443 1372)"/>
+                                        <circle cx="339" cy="1107" r="8" transform="rotate(180 339 1107)"/>
+                                        <circle cx="24" cy="1305" r="8" transform="rotate(180 24 1305)"/>
+                                        <circle cx="8" cy="8" r="8"/>
+                                        <circle cx="189" cy="157" r="8"/>
+                                        <circle cx="548" cy="76" r="8"/>
+                                        <circle cx="685" cy="347" r="8"/>
+                                        <circle cx="858" cy="141" r="8"/>
+                                        <circle cx="874" cy="670" r="8" transform="rotate(180 874 670)"/>
+                                        <circle cx="657" cy="488" r="8" transform="rotate(180 657 488)"/>
+                                        <circle cx="443" cy="604" r="8" transform="rotate(180 443 604)"/>
+                                        <circle cx="339" cy="339" r="8" transform="rotate(180 339 339)"/>
+                                        <circle cx="24" cy="537" r="8" transform="rotate(180 24 537)"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="txt">svg snow</div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="hover">
+                <h3>title</h3>
+                <div class="ex_inner">
+                    <h4><span>subtitle</span></h4>
+                    example
+                </div>
+            </section>
+        </div>
+
+        <div class="go_top">
+            <button type="button" class="btn">Top</button>
+        </div>
+    </div>
+
+    <footer class="ex_footer">
+        ex footer
+    </footer> 
+</div>
+</body>
+</html>

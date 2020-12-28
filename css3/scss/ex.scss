@@ -1,0 +1,666 @@
+@charset "utf-8";
+
+@import "variables", "reset";
+
+/* ####################### layout ####################### */
+body{background: #222;}
+
+.ex_wrap{}
+.ex_header{
+    position: fixed; left: 0; right: 0; top: 0; padding: 20px 0 0; height: 60px; background: rgba(0, 0, 0, 0.2); transition: .2s; text-align: center; z-index: 200;
+    &.scroll{background: rgba(0, 0, 0, 0.8);}
+    h1 > a{
+        position: relative; padding: 0 20px; color: $lightgray;
+        &:first-of-type::after{@include pseudo($r: -3px, $t: 50%, $w: 2px, $h: 10px); transform: translateY(-50%); background: $lightgray;}
+        &.atv{font-weight: 700; color: $white;}
+    }
+}
+.ex_footer{padding: 50px; border-top: $border_666; font-weight: 300; font-size: $font14; color: $gray; text-align: center;}
+
+.ex_container{position: relative; margin: 0 auto; padding: 70px 30px 0 300px; min-width: 1200px; z-index: 100;}
+.ex_nav{position: fixed; left: 0; top: 70px; padding: 0 30px; width: 300px; height: calc(100% - 100px);}
+.ex_menu{
+    li{
+        border-bottom: $border_666; font-size: $font14; line-height: 1.5; color: $gray;
+        a{
+            display: block; padding: 5px 0; color: $gray;
+            &:hover, &.atv{color: $white;}
+        }
+        ul{
+            padding: 0 0 0 15px; border-top: $border_666;
+            > li{
+                padding: 5px 0; border-bottom: $border_dotted_666; cursor: default;
+                &:last-of-type{border: 0;}
+            }
+        }
+    }
+}
+.ex_contents{
+    position: relative; padding: 0 0 50px;
+    > section{
+        margin: 0 0 20px; background: $white; color: $black;
+        &::after{@include float_clear;}
+        h3{padding: 15px 20px; border-bottom: $border_666; font-weight: 700; font-size: $font18;}
+        h4{
+            margin: 0 0 15px;
+            span{display: inline-block; padding: 5px 10px; background: $silver; font-weight: 700;}
+        }
+        .ex_inner{
+            padding: 20px; font-size: $font14;
+            &.floating2{float: left; width: 50%;}
+            &.floating3{float: left; width: 33.33%;}
+            &.floating4{float: left; width: 25%;}
+        }
+    }
+}
+
+
+/* ####################### contents ####################### */
+.go_top{
+    position: fixed; right: 0; bottom: 20px; transition-duration: .2s;
+    &.btm{position: absolute; bottom: 10px;}
+    .btn{width: 50px; height: 50px; background: rgba(252, 43, 43, 0.7); border-radius: 5px; font-weight: 700; color: $white;}
+    &:hover{
+        .btn{background: $red;}
+    }
+}
+
+.btn_warning{
+    position: relative; width: 40px; height: 40px; background: orange; box-shadow: 0px 3px 5px 2px rgb(187, 179, 179); border-radius: 6px; transition: 250ms ease;
+    span{
+        position: absolute; left: 50%; transform: translateX(-50%); width: 4px; background: #fff; border-radius: 2px;
+        &:first-of-type{top: 7px; height: 20px;}
+        &:last-of-type{bottom: 7px; height: 4px;}
+    }
+    &:hover, &:focus{
+        background: rgb(236, 46, 46);
+        span:first-of-type{transform: translateX(calc(-50% + 3px)) rotate(45deg) translateY(4px);}
+        span:last-of-type{height: 20px; transform: translateX(calc(-50% + 3px)) rotate(-45deg) translateY(-4px);}
+    }
+}
+
+.btn_box{
+    .btn{
+        overflow: hidden; position: relative; display: inline-block; margin: 0 5px; padding: 0 20px; height: 36px;
+    }
+    &.bg_slide{
+        .btn{
+            background: #fff; border: 2px solid $red; color: $red; transition: .25s color cubic-bezier(0.215, 0.61, 0.355, 1); vertical-align: top;
+            span{position: relative; font-weight: 600; line-height: 32px; color: $red; vertical-align: top; z-index: 20;}
+            &::after{@include pseudo($l: 0, $t: 0, $w: 100%, $h: 100%); background: $red; transform: translateX(-101%); transition: all .2s cubic-bezier(.215,.61,.355,1); z-index: 10;}
+            &:first-of-type{margin-left: 0;}
+            &:hover, &:focus{
+                span{color: $white;}
+                &::after{transform: translateX(0);}
+            }
+        }
+    }
+    &.bg_color{
+        .btn{
+            background: $gray; color: $white; transition: background 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+            &:hover, &:focus{background: $black;}
+        }
+    }
+}
+
+.btn_more{
+    position: relative; display: inline-block;
+    .btn{
+        display: inline-block; padding: 10px 24px 10px 10px; border-radius: 2px; box-shadow: 0px 3px 5px 2px rgb(187, 179, 179);
+        &:before{@include pseudo; transition: all .2s;}
+        &:after{@extend :before; right: 8px; top: 50%;}
+    }    
+}
+.btn_more01{
+    .btn{
+        color: $black;
+        &:hover, &:focus{
+            &::after{right: 5px; border-color: $black;}
+        }
+        &::after{width: 12px; height: 12px; border: solid $black; border-width: 3px 3px 0 0; transform: translateY(-50%) rotate(45deg) scale(0.5); transition: all .4s;}
+    }
+}
+.btn_more02{
+    .btn{
+         &:hover, &:focus{
+            &::after{margin: -2px 0 0; transform: rotate(315deg);}
+        }
+        &::after{margin: -5px 0 0; width: 6px; height: 6px; border: solid $black; border-width: 2px 2px 0 0; transform: rotate(135deg);}
+    }
+}
+.btn_more03{
+    .btn{
+        &:before{@include pseudo($r: 6px, $t: 1.2em, $w: 12px, $h: 2px); background: $black; transform: rotate(180deg);}
+        &:after{@extend :before; transform: rotate(90deg);}
+        &:hover, &:focus{
+            &:before{transform: rotate(0);} 
+        }
+    }
+}
+
+.switch_box{
+    .item{
+        position: relative; display: inline-block; width: 50px; height: 28px;
+        input{
+            width: 0; height: 0; opacity: 0;
+            &:checked + .slider{background: $royal;}
+            &:checked + .slider:before{transform: translateX(21px);}
+        }
+        .slider{
+            position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; background: $silver;
+            -webkit-transition: .4s;
+            transition: .4s;
+            &:before{@include pseudo($l: 4px, $b: 4px, $w: 21px, $h: 20px); background: #fff; transition: .4s; -webkit-transition: .4s;}
+            &.round{
+                border-radius: 28px;
+                &:before{border-radius: 28px;}
+            }
+        }
+    }
+}
+
+.map_box{
+    position: relative; height: 100px; border: $border_dddfe1;
+    .marker_box{
+         position: absolute; left: 45.8%; top: 30.7%; width: 18px; height: 18px;
+        .circle{position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; border: 2px solid #fc2b2b; border-radius: 50%; animation: pulse 2s infinite ease-out; opacity: 0;}
+        .circle02{animation-delay: 0.5s;}
+        
+        @keyframes pulse{
+            0%{transform: scale(0.1, 0.1); opacity: 0;}
+            50%{opacity: 1;}
+            70%{transform: scale(1.3, 1.3); opacity: 0;}
+        }
+    }
+}
+
+.bg_shadow{
+    margin: 30px; width: 30px; height: 30px; border-radius: 50%; background: $yellow; animation: shadow 2s infinite;
+    
+    @keyframes shadow{
+        0%{box-shadow: 0 0 0 0px rgba(255, 204, 2, 0.6);}
+        100%{box-shadow: 0 0 0 25px rgba(255, 204, 2, 0);}
+    }
+}
+
+.draw_box{
+    position: relative; width: 100px; height: 50px;
+    &:before{@include pseudo($l: 0, $t: 0, $h: 4px); background: $royal; animation: draw_top .2s both;}
+    &:after{@include pseudo($t: 0, $r: 0, $w: 4px); background: $royal; animation: draw_right .2s .2s both;}
+    > span{
+        display: block; height: 100%;
+        &:before{@include pseudo($b: 0, $r: 0, $h: 4px); background: $royal; animation: draw_bottom .2s .4s both;}
+        &:after{@include pseudo($l: 0, $b: 0, $w: 4px); background: $royal; animation: draw_left .2s .6s both;}
+    }
+    > em{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0; animation: flicker 1s 1.2s infinite;}
+    
+    @keyframes draw_top{
+        0%{right: 100%;}
+        100%{right: 0;}
+    }
+    @keyframes draw_right{
+        0%{bottom: 100%;}
+        100%{bottom: 0;}
+    }
+    @keyframes draw_bottom{
+        0%{left: 100%;}
+        100%{left: 0;}
+    }
+    @keyframes draw_left{
+        0%{top: 100%;}
+        100%{top: 0;}
+    }
+    @keyframes flicker{
+        0%{opacity: 0;}
+        25%{opacity: 30%;}
+        50%{opacity: 70%;}
+        75%{opacity: 100%;}
+        100%{opacity: 30%;}
+    }
+}
+
+.bar_graph{
+    position: relative; height: 30px; border: $border_dddfe1;
+    .fill{
+        @include pseudo($l: 0, $t: 0, $w: 0, $h: 100%); background-color: $yellow; transition: width 1s .5s;
+    }
+    .txt{
+        @include pseudo($r: 10px, $t: 0); line-height: 30px;
+    }
+}
+
+.awesome{
+    .fa-cog{color: $sky;}
+}
+
+.loading{
+    > .spinner{width: 30px; 
+        -webkit-animation: spin 1s infinite steps(8);
+        animation: spin 1s infinite steps(8);
+    }
+    
+    @keyframes spin{
+        0%{transform: rotate(0);}
+        100%{transform: rotate(360deg);}
+    }
+}
+
+.sprite{
+    .character{
+        position: relative;
+        &::before{overflow: hidden; @include pseudo($l: 0, $t: 0, $w: 100%, $h: 100%); background-repeat: no-repeat; background-position: center 0;}
+    }
+}
+.sprite01{
+    .character{
+        width: 86px; height: 86px;
+        &::before{background: url(../img/img_sprite_penguin.png); background-size: 86px auto; animation: penguin 1.5s steps(17) infinite;}
+    }
+    
+    @keyframes penguin{
+        0%{background-position: 50% 0;}
+        100%{background-position: 50% -1462px;}
+    }
+}
+.sprite02{
+    .character{
+        width: 112px; height: 112px;
+        &::before{background: url(../img/img_sprite_penguin02.png); background-size: 112px auto; animation: penguin02 1.7s steps(20) infinite;}
+    }
+    
+    @keyframes penguin02{
+        0%{background-position: 50% 0;}
+        100%{background-position: 50% -2240px;}
+    }
+}
+.sprite03{
+    .character{
+        width: 133px; height: 4.154rem;
+        &::before{background: url(../img/img_sprite_cat.png); background-size: 133px auto; animation: cat 1.7s steps(12) infinite;}
+    }
+    
+    @keyframes cat{
+        0%{background-position: 50% 0;}
+        100%{background-position: 50% -797px;}
+    }
+}
+
+.wink{
+    overflow: hidden; position: relative; width: 140px; height: 158px;
+    .character{position: absolute; right: 0; bottom: 0; width: 100%; height: 100%; background: url(../img/penguin01.png) no-repeat right bottom; background-size: auto 92%; animation: wink_ani 6s ease infinite; transform: rotate(7deg); transform-origin: right bottom;}
+    .star01{position: absolute; left: 31px; top: 38px; width: 20px; height: 20px; background: url(../img/star.png) no-repeat 0 0; background-size: 100% auto; animation: star_ani01 4s infinite;}
+    .star02{@extend .star01; left: 31px; top: 62px; width: 16px; height: 16px; animation: star_ani02 4s infinite;}
+    
+    @keyframes wink_ani{
+        0%{transform: rotate(7deg);}
+        20%{transform: rotate(7deg);}
+        40%{transform: rotate(0);}
+        46%{background-image: url(../img/penguin01.png);}
+        50%{background-image: url(../img/penguin02.png);}
+        54%{background-image: url(../img/penguin01.png);}
+        60%{transform: rotate(0);}
+        80%{transform: rotate(7deg);}
+        100%{transform: rotate(7deg);}
+    }
+    @keyframes star_ani01{
+        0%{transform: scale(0);}
+        35%{transform: scale(0);}
+        55%{transform: scale(1);}
+        75%{transform: scale(0);}
+        100%{transform: scale(0);}
+    }
+    @keyframes star_ani02{
+        0%{transform: scale(0);}
+        15%{transform: scale(0);}
+        45%{transform: scale(1);}
+        65%{transform: scale(0);}
+        100%{transform: scale(0);}
+    }
+}
+
+.wobble_box{
+    position: relative; padding: 35px 0 0;
+    .obj{width: 80px; height: 110px; background: $royal; border-radius: 50px 50px 0 0;}
+    .wobble{
+        position: absolute; left: 10px; top: 0; width: 60px; height: 24px; background: $sky; border-radius: 6px; line-height: 24px; color: $white; text-align: center; animation: wobble_ani 3s infinite both;
+        &::after{@include pseudo($l: 50%, $b: -5px, $w: 10px, $h: 10px); background: $sky; transform: translateX(-50%) rotate(45deg);}
+    }
+    @keyframes wobble_ani{
+        0%{transform: none;}
+        15%{transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+        30%{transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+        45%{transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);}
+        60%{transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+        75%{transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+        100%{transform: none;}
+    }
+}
+
+.box_type{
+    &::after{@include float_clear;}
+    .box{
+        float: left; margin: 0 0 10px 2%; width: 32%; border: $border_dddfe1;
+        &:nth-child(3n+1){margin-left: 0; clear: both;}
+        &:hover{box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); transition: .2s;}
+        a{
+            display: block; padding: 20px; color: $black;
+            *{display: block;}
+        }
+    }
+}
+.box_type01{
+    .box{
+        &:hover{transform: translateY(-5px);}
+    }
+}
+.box_type02{
+    .box{
+        &:hover{transform: scale(1.05);}
+    }
+}
+.box_type03{
+    display: flex; height: 150px;
+    .box{
+        position: relative; flex: 1; margin: 0 2px; height: 100%; border: $border_dddfe1; background: url(../img/thumb01.png) no-repeat 50% 0; background-size: cover; transform: skewX(5deg); transition: all .3s;
+        &.box02{background-image: url(../img/thumb02.png);}
+        &.box03{background-image: url(../img/thumb03.png);}
+        &.box04{background-image: url(../img/thumb04.png);}
+        &.box05{background-image: url(../img/thumb05.png);}
+        > p{position: absolute; left: 0; bottom: 0; padding: 10px; background: rgba(255, 223, 0, .7); color: $black; transform: rotate(-90deg); transform-origin: 17px 17px; transition: all .3s; font-size: $font12; text-transform: uppercase; white-space: nowrap; color: $white;}
+        &:hover{
+            flex: 5;
+            > p{transform: rotate(0); font-weight: 700;}
+        }
+    }
+    &:hover img{transform: skewX(0);}
+}
+
+.crop_box{
+    overflow: hidden; position: relative; width: 252px; height: 162px; border: $border_dddfe1;
+    &.type02{width: 162px;}
+    &.type03{width: 300px;}
+    > img{position: absolute; left: 50%; height: 100%; transform: translateX(-50%);}
+}
+
+.rendering_box{
+    img{image-rendering: auto;}
+    &.small > img{width: 30px;}
+    &.large > img{width: 100px;}
+}
+
+%accordion_pseudo{@include pseudo($r: 10px, $t: 1.1em, $w: 12px, $h: 2px); background: $black; transition: all .3s; transform: rotate(180deg);}
+.accordion{
+    &::after{@include float_clear;}
+    li{
+        float: left; margin: 0 0 0 2%; width: 32%;
+        &:first-of-type{margin: 0;}
+        .title .tit_txt{
+            position: relative; display: block; padding: 10px; border-bottom: $border_dddfe1; color: $black;
+            &:before{@extend %accordion_pseudo;}
+            &:after{@extend %accordion_pseudo; transform: rotate(90deg);}
+            /*&:before{@include pseudo($r: 10px, $t: 1.1em, $w: 12px, $h: 2px); background: $black; transition: all .3s; transform: rotate(180deg);}
+            &:after{@extend :before; transform: rotate(90deg);}*/
+        }
+        &.atv{
+            .title .tit_txt{
+                &:before{transform: rotate(0);}
+            }
+        }
+    }
+    .desc{display: none; padding: 10px;}    
+}
+
+.tab_box{
+    text-align: center;
+    .tabs01{
+        display: flex;
+        > li{
+            flex: 1;
+            > a{position: relative; display: block; width: 100%; background: #f8f8f8; border: $border_e3e3e3; border-bottom-width: 0; line-height: 40px; color: $black;}
+            & + li{
+                margin-left: -1px;
+                > a{
+                    border-left: 0;
+                        &::before{@include pseudo($l: 0, $t: 50%, $w: 1px, $h: 12px); background: $black;
+                        -webkit-transform: translate(0, -50%);
+                        -ms-transform: translate(0, -50%);
+                        -moz-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+            &.atv{
+                margin-bottom: -1px;
+                > a{
+                    background: $white; border: $border_666; border-bottom-width: 0; font-weight: 700; z-index: 10;
+                    &::before{display: none;}
+                }
+            }
+        }
+    }
+    .tabs02{
+        margin: 10px 0 0;
+        &::after{@include float_clear;}
+        > li{
+            float: left; /*width: calc(25% + 1px); */width: calc(100%/4 + 1px);
+            > a{
+                position: relative; display: block; width: 100%; border: $border_e3e3e3; color: $black; line-height: 40px;
+            }
+            &:first-of-type{/* width: 25%; */ width: calc(100%/4);}
+            &:last-of-type{}
+            & + li{
+                margin-left: -1px;
+                > a{}
+            }
+            &.atv{
+                 > a{
+                     border-bottom-color: $white; font-weight: 700;
+                     &::before{@include pseudo($l: -1px, $t: -1px, $w: 100%, $h: 100%); border: $border_666; border-bottom-width: 0; z-index: 10;}
+                     &::after{@include pseudo($l: -1px, $t: -1px, $w: calc(100% + 2px), $h: 3px); border-top: 3px solid $sky; z-index: 20;}
+                }
+            }
+        }
+    }    
+    .tab_con{border: $border_e3e3e3; border-top: 0; line-height: 50px;}
+}
+
+.kakao{
+    .box{
+        position: relative; margin: 10px 0 0; border: $border_dddfe1;
+        &:first-of-type{margin: 0;}
+        .txt_label{
+            position: absolute; top: 0; right: 0; bottom: 0; left: 0; padding: 7px 30px; font-size: $font12; line-height: 1.2;
+        }
+        .txt_number{
+            padding: 15px 30px 0; height: 50px; border: 0; font-size: $font20; 
+            &::placeholder{color: transparent;}
+            &:first-of-type:placeholder-shown ~ .txt_label{font-size: $font14; line-height: 35px;}
+            &:first-of-type:focus{}
+            &:first-of-type:focus ~ .txt_label{font-size: $font12; line-height: 1.2;}
+        }
+        .txt_time{position: absolute; right: 30px; top: 0; line-height: 50px;}
+        
+        &.jumin{
+            .txt_label{
+                right: auto; bottom: auto;
+            }
+            .jumin01{padding: 15px 0 0 30px; width: 100px;} 
+            .jumin02{padding: 0; width: 0; -webkit-text-security: disc;}
+            .dash{display: inline-block; width: 20px; font-size: 0; text-align: center;}
+            &.atv{
+                .jumin02{padding: 15px 30px 0 0; width: calc(100% - 130px);}
+                .dash{font-size: $font14;}
+            }
+        }
+    }
+}
+.shinhan{
+    .box{
+        position: relative; margin: 10px 0 0;
+        &:first-of-type{margin: 0;}
+        &.user{
+            label{display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 0 20px; line-height: 40px; transition: all .1s ease; color: $lightgray; z-index: 10;}
+            input[type=text]{
+                position: relative; background: transparent; z-index: 20;
+                &:focus{
+                    border: 2px solid $black;
+                     + label{left: 12px; top: -8px; width: auto; height: auto; display: inline-block; padding: 0 6px; background: $white; font-weight: 700; line-height: 1.1; color: $black; z-index: 30;}
+                }
+            }
+        }
+        &.srch{
+            label{
+                position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;
+                > img{width: 100%;}
+            }
+            input{padding: 0 40px;}
+            .btn_clear{display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 23px; height: 23px; background: url(../img/ico_clear.png) no-repeat 0 0; background-size: contain;}
+        }
+    }
+}
+
+.txt_security{
+    input{-webkit-text-security: disc;}
+}
+
+.pw_toggle{
+    position: relative; padding: 0 70px 0 0;
+    input{}
+    button{@include pseudo($t: 0, $r: 0, $w: 60px, $h: 38px); border-radius: 2px; box-shadow: 0px 3px 5px 2px #bbb3b3;}
+}
+
+.invert{
+    > button{padding: 5px 10px; border: 1px solid $black;}
+}
+
+.inline_box{
+    font-size: 0;
+    *{display: inline-block; padding: 10px 20px; border: $border_e3e3e3; font-size: $font14;}
+}
+
+.ellipsis_box{
+    line-height: 1.5;
+    &.singleline{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+    &.multiline{height: 42px;
+    overflow: hidden;
+    display: -webkit-box;
+        text-overflow: ellipsis;
+        word-wrap:break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; }
+}
+
+.smail{
+    
+}
+
+.snow_box{
+    position: relative; overflow: hidden; height: 500px; background: radial-gradient(50% 176%, #253854 80%, #061922 100%);
+    .snow{
+        position: absolute; left: 50%; top: 0; width: 100%; height: 100%; min-width: 100vw; min-height: 100vh; transform: translateX(-50%);
+        svg{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    }
+    #snow_top_layer{will-change: transform; transform: translateY(-768px); animation: fall 22.5s infinite linear;}
+    #snow_bottom_layer{@extend #snow_top_layer; animation: fall 45s infinite linear;}
+    .txt{
+        position: relative; font-size: 3rem; color: $white; text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.66); letter-spacing: -0.05em;
+    }
+    @keyframes fall{
+        100%{transform: translateY(0);}
+    }
+}
+
+%gooey_init{@include pseudo($l: 0, $t: 0, $r: 0, $w: 100%, $h: 100%); margin: 0 auto; background: #ddb8c2; border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform-style: preserve-3d; outline: 1px solid transparent; will-change: border-radius; animation: morph 3s linear infinite;}
+.gooey_box{
+    overflow: visible; position: relative; padding: 0 0 0 10px; width: 108px; height: 102px;
+    .txt{@include pseudo($l: 50%, $t: 35px); transform: translateX(-50%); font-weight: 700; color: $white; z-index: 2;}
+    .arrow{@include pseudo($l: 50%, $b: 21px, $w: 8px); transform: translateX(-50%) rotate(-135deg); z-index: 2;}
+    .updown{animation: updown ease-in-out .8s infinite alternate;}
+    .gooey{
+        @extend %gooey_init; z-index: 1;
+        &:before{@extend %gooey_init; background: #f7bbc2; will-change: border-radius, transform, opacity; animation-delay: 200ms; animation-duration: 1.5s; opacity: 1;}
+        &:after{@extend %gooey_init; background: #ed5167; will-change: border-radius, transform, opacity; animation-delay: 400ms; box-shadow: 1px 0 3px #ddb8c2;}
+    }
+    @keyframes morph{
+        0%, 100% {border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: translate3d(0,0,0) rotateZ(0.01deg);}
+        34% {border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%; transform: translate3d(0,5px,0) rotateZ(0.01deg);}
+        50% {opacity: .89; transform: translate3d(0,0,0) rotateZ(0.01deg);}
+        67% {border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: translate3d(0,-3px,0) rotateZ(0.01deg);}
+    }
+    @keyframes updown{
+        0%{transform: translate(-50%, 0);}
+        40%{transform: translate(-50%, 3px);}
+        100%{transform: translate(-50%, 0);}
+    }
+}
+
+.scroll_box{
+    position: relative; width: 36px; height: 60px; border: $border_666; border-width: 3px; border-radius: 20px;
+    &::before{
+        @include pseudo($l: 50%, $t: 8px, $w: 6px, $h: 6px); transform: translateX(-50%); background: $gray; border-radius: 6px; opacity: 1; animation: scroll 1.5s infinite; animation-timing-function: cubic-bezier(0.65, -0.75, 0.25, 1.5);
+    }
+    @keyframes scroll{
+        0%{transform: translate(-50%, 0) scaleY(1);}
+        100%{transform: translate(-50%, 20px) scaleY(1.2); opacity: 0;}
+    }
+}
+
+.flag{
+	position: relative; width: 30px; height: 28px; background: $black; font-weight: 700; font-size: $font12; line-height: 24px; color: $white; text-align: center;
+	&:after{@include pseudo($l: 0, $b: 0); border-bottom: 5px solid $white; border-left: 15px solid transparent; border-right: 15px solid transparent;}
+}
+.talk_bubble01{
+	position: relative; display: inline-block; padding: 5px 20px; background: $black; border-radius: 14px; transform: rotate(-4deg); line-height: 1.5; color: $white;
+	&:before{@include pseudo($l: 22px, $b: -3px, $w: 14px, $h: 15px, $z: 1); background: $black; transform: rotate(25deg);}
+	span{position: relative; z-index: 2;}
+}
+.talk_bubble02{
+	position: relative; margin: 0 0 0 12px; padding: 10px; width: 120px; height: 50px; background: $black; border-radius: 10px; color: $white;
+	&:before{@include pseudo($r: 100%, $t: 14px); border-top: 8px solid transparent; border-right: 12px solid $black; border-bottom: 8px solid transparent;}
+}
+.heart{
+	position: relative;
+	&:before{@include pseudo($l: 18px, $t: 0, $w: 18px, $h: 30px); background: $red; border-radius: 25px 25px 0 0; transform: rotate(-45deg); transform-origin: 0 100%;}
+	&:after{@extend :before; left: 0; transform: rotate(45deg); transform-origin: 100% 100%;}
+}
+.border_shape{width: 50px; border-top: 20px solid $sky; border-left: 25px solid $red; border-right: 25px solid $yellow; border-bottom: 20px solid $black;}
+.triangle{
+	position: relative; width: 20px;
+	&.up{border-bottom: 20px solid $black; border-left: 15px solid transparent; border-right: 15px solid transparent;}
+	&.down{border-top: 20px solid $black; border-left: 15px solid transparent; border-right: 15px solid transparent;}
+	&.left{border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-right: 20px solid $black;}
+	&.right{border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-left: 20px solid $black;}
+	&.top_left{border-top: 20px solid $black; border-right: 20px solid transparent;}
+	&.top_right{border-top: 20px solid $black; border-left:  20px solid transparent;}
+	&.btm_left{border-bottom: 20px solid $black; border-right: 20px solid transparent;}
+	&.btm_right{border-bottom: 20px solid $black; border-left: 20px solid transparent;}
+}
+.star_six{
+	position: relative; width: 0; height: 0; border-bottom: 25px solid $black; border-left: 15px solid transparent; border-right: 15px solid transparent;
+	&::after{@include pseudo($l: -15px, $t: 8px); border-top: 25px solid $black; border-left: 15px solid transparent; border-right: 15px solid transparent;}
+}
+.star_five{
+	position: relative; margin: 25px 0 0; width: 35px; height: 0; border-bottom: 12px solid $black; border-left: 18px solid transparent; border-right: 18px solid transparent; transform: rotate(35deg);
+	&::before{@include pseudo($l: -11px, $t: -8px, $z: 1); border-bottom: 14px solid $black; border-left: 5px solid transparent; border-right: 5px solid transparent; transform: rotate(-35deg);}
+	&::after{@include pseudo($l: -19px, $t: 1px); border-bottom: 12px solid $black; border-left: 18px solid transparent; border-right: 18px solid transparent; transform: rotate(-70deg);}
+}
+.ribbon{
+	position: relative; width: 25px; height: 25px; background: $black; border-radius: 25px;
+	&:before{@include pseudo($l: -2px, $t: 16px); border-bottom: 17px solid $black; border-left: 9px solid transparent; border-right: 9px solid transparent; transform: rotate(-145deg);}
+	&:after{@extend :before; left: auto; right: -2px; transform: rotate(145deg);}
+}
+.infinity{
+	position: relative; width: 41px;
+	
+	&::before{@include pseudo($l: 0, $t: 0, $w: 10px, $h: 10px); border: 5px solid $black; border-radius: 50px 50px 0 50px; transform: rotate(-45deg);}
+	&::after{@include pseudo($r: 0, $t: 0, $w: 10px, $h: 10px); border: 5px solid $black; border-radius: 50px 50px 50px 0; transform: rotate(45deg);}
+}
+.egg{width: 18px; height: 26px; background: $black; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* top-left-x top-right-x bottom-right-x bottom-left-x / top-left-y top-right-y bottom-right-y bottom-left-y */}
+.moon{
+	margin: -10px 0 0 -8px; width: 40px; height: 40px; border-radius: 50%; background: $white; box-shadow: 10px 8px 0 0 $black;
+}
+
+
+
+
+ 

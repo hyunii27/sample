@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*  font 구분
+    국문          : Noto Sans KR
+    영문 contents : Open Sans     */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+/* reset css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;}
+html, body, input, textarea, select, button, table, li, dd, p, b, span, em, strong{-webkit-text-size-adjust: none;}
+html{-ms-touch-action: none; font-family: "Open Sans"; font-size: 16px; font-weight: 400; line-height: 1.1; letter-spacing: -0.025em; color: $white;}
+body{-webkit-text-size-adjust: none;}
+html, body{width: 100%; height: 100%;}
+h1, h2, h3, h4, h5, h6{font-weight: 400; font-size: 1rem;}
+table{width: 100%; border-collapse: collapse; border-spacing: 0;}
+table, fieldset, th, td, img{border: none 0; font-weight: 400;}
+td{word-break: break-all;}
+ul, ol, menu{list-style: none;}
+address, em{font-style: normal;}
+a, a:link, a:visited, a:hover, a:active, a:focus{color: $white; text-decoration: none;}
+strong{font-weight: 400;}
+input, select, textarea{vertical-align: middle;}
+img, fieldset{border: 0;}
+img{/* width: 100%; */ font-size: 0; line-height: 0; vertical-align: top;}
+caption{visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+legend, label span, .blind{visibility: hidden; overflow: hidden; position: absolute; left: 0; top: 0; margin: 0; padding: 0  !important;  width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important;}
+label{cursor: pointer;}
+pre{white-space: pre-wrap; word-wrap: break-word;}
+button{display: inline-block; margin: 0; padding: 0; border: 0; background: none; text-align: center; cursor: pointer; vertical-align: middle; font-family: "Open Sans"; line-height: 1.1; letter-spacing: -0.025em;}
+button::-moz-focus-inner{margin: 0; padding: 0; border: 0;}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=file],
+textarea{margin: 0; padding: 10px 15px; width: 100%; height: 40px; box-sizing: border-box; background-color: #fff; border: 1px solid #dddfe1; line-height: 1.7; resize: none; letter-spacing: -0.025em;
+    -webkit-appearance: none; -webkit-border-radius: 0;
+    -moz-appearance: none; -moz-border-radius: 0;
+    appearance: none; border-radius: 0;}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=file]:focus,
+textarea:focus,
+select:focus{outline: none !important; border-color: #41abff;}
+input[type=text]::-ms-clear,
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear{display: none;}
+input[readonly]{background-color: #f8f8f8; color: #c5c5c5;}
+select{margin: 0; padding: 0 15px; width: 100%; height: 40px; box-sizing: border-box; /*background: #fff url("../img/common/bg_arrow_down.png") no-repeat right 16px top 17px; background-size: 15px 9px;*/ border: 1px solid #dddfe1; color: #000;
+    /*-webkit-appearance: none; -webkit-border-radius: 0;
+    -moz-appearance: none; -moz-border-radius: 0;
+    appearance: none; border-radius: 0;*/}
+select::-ms-expand{display: none;}
+::-webkit-input-placeholder{color: #999;} /* Chrome/Opera/Safari */
+::-moz-placeholder{color: #999;}/* Firefox 19+ */
+:-ms-input-placeholder{color: #999;}/* IE 10+ */
+:-moz-placeholder{color: #999;}/* Firefox 18- */
+.scroll_off{position: fixed; overflow: hidden; height: 100%;}
+
+
+/* html5 reset*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+
+
+/* clear */
+.clearfix{zoom:1;}
+.clearfix::after{display: block; clear: both; content: ""; height: 0; visibility: hidden;} 
+.clear{clear: both;}
+
+/* display */
+.pc{display: block;}
+.tablet{display: none;}
+.mobile{display:none;}
+
+.show{display: block !important;}
+.hide{display: none !important;}

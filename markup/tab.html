@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>tab</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body style="background: #fff;">
+<div class="tab_box">
+    <div class="txt"></div>
+    
+    <ul class="tabs">
+        <li class="on"><a href="#tab01">tab01</a></li>
+        <li><a href="#tab02">tab02</a></li>
+        <li><a href="#tab03">tab03</a></li>
+        <li><a href="#tab04">tab04</a></li>
+    </ul>
+    <div class="tab_con_wrap">
+        <div class="tab_con" id="tab01">tabcon01</div>
+        <div class="tab_con" id="tab02">tabcon0202</div>
+        <div class="tab_con" id="tab03">tabcon030303</div>
+        <div class="tab_con" id="tab04">tabcon04040404</div>
+    </div>
+</div>
+    
+<script>
+    tab_box(".tabs > li > a", ".tab_con_wrap > .tab_con");
+    
+    var get_obj = function(){
+        var result_obj = {},
+            query_str = location.search.replace("?", "").split("&");
+        
+        query_str.forEach(function(q){
+            var key = q.split("=")[0],
+                val = q.split("=")[1];
+            result_obj[key] = val;
+        });
+        return result_obj;
+    };
+    
+    var init_tab = get_obj().tab,
+        init_type = get_obj().type; //type은 임의로 추가해 본 것
+    
+    if (init_tab){
+        var init_num = parseInt(init_tab, 10) - 1;
+        
+        if (init_num < $(".tabs > li").length)
+            tab_trigger(init_num);
+        else
+            tab_trigger(0);
+    } else{
+        tab_trigger(0);
+    }
+    
+    if (init_type)
+        $(".tab_box .txt").text("tab : " + init_tab + ",　type : " + init_type);
+    
+    function tab_trigger(value){
+        $(".tabs li").eq(value).find("a").trigger("click");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>제휴사 | 카카오페이 P2P 투자</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="_css/common_color.css">
+	<link rel="stylesheet" href="_css/affiliate_join_pgv.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/kakaopay-2018/project/p2p/_css/common.css"> -->
+</head>
+<body class="body_markup bg_cont_white"><!-- 2019-08-08 다크모드 지원 페이지 body .dark_mode 클래스 추가 -->
+    <div id="kakaoWrap" class="wrap_p2p">
+        <header id="kakaoHead">
+            <h1 class="screen_out">카카오페이 P2P 투자</h1>
+        </header>
+        <hr class="hide">
+        <div id="kakaoContent" class="cont_affiliate" role="main">
+            <article id="mArticle">
+				<h2 class="screen_out">제휴사</h2>
+				<div class="affiliate_container">
+					<div class="affiliate_head">
+						<img src="./_images/temp/img_logo.png" alt="Together Funding" class="img_logo">
+					</div>
+					<div class="affiliate_contents">
+						<h3 class="tit_affiliate">가입 정보 입력</h3>
+						<div class="box_comm box_enter">
+							<!-- <div class="item_tf item_tf_type2">
+								<input type="text" id="tfResidentNumber" class="tf_g" placeholder="주민등록번호">
+								<label for="tfResidentNumber" class="lab_g">주민등록번호</label>
+							</div> -->
+							<div class="item_tf item_tf_type2">
+								<input type="tel" id="tfResidentNumber" class="tf_g account_input1" placeholder="주민등록번호" maxlength="6">
+								<span class="tf_g num_flash">-</span>
+								<input type="tel" id="tfResidentNumber2" class="tf_g account_input2" maxlength="7" title="주민등록번호 뒷자리">
+								<label for="tfResidentNumber" class="lab_g account_num">주민등록번호를 올바르게 입력해주세요.</label>
+							</div>
+							<div class="item_tf item_tf_type2">
+								<input type="text" id="tfEmail" class="tf_g" placeholder="이메일 주소">
+								<label for="tfEmail" class="lab_g">이메일 주소</label>
+							</div>
+							<script>
+								jQuery.fn.putCursorAtEnd = function() {
+									return this.each(function() {
+									
+									var $el = $(this),
+										el = this;
+
+									if (!$el.is(":focus")) {
+										$el.focus();
+									}
+
+									if (el.setSelectionRange) {
+										var len = $el.val().length * 2;
+										
+										setTimeout(function() {
+										el.setSelectionRange(len, len);
+										}, 1);
+									} else {
+										$el.val($el.val());
+									}
+
+									this.scrollTop = 999999;
+									});
+								};
+
+								$(function() {
+									$("#tfResidentNumber").click(function() {
+										$(this).putCursorAtEnd().on("focus", function() {$(this).putCursorAtEnd()});
+									});
+									
+									$("#tfResidentNumber").on("keyup", function() {
+										if($(this).val().length == 6) {
+											$(".num_flash").css("font-size", "20px");
+											$("#tfResidentNumber2").focus();
+											$(".lab_g.account_num").css({"height": "15px", "padding": "19px 24px 0"});
+										} else{
+											if(!$("#tfResidentNumber2").val()) {
+												$(".lab_g.account_num").css({"height": "auto", "padding": "19px 24px"});
+												$(".num_flash").css("font-size", "0px");
+											}
+										}
+									});
+								});
+							</script>
+						</div>
+					</div>
+				</div>
+				<div class="area_btn">
+					<button type="button" class="btn_g disabled">다음</button>
+				</div>
+            </article>
+        </div>
+	</div>
+	<div class="dimmed_layer" style="display:none"></div>
+	<div class="p2p_layer p2p_layer_bottomsheet" style="display:none">
+		<div class="inner_layer">
+			<div class="layer_head">
+				<strong class="tit_layer">통신사 선택</strong>
+			</div>
+			<div class="layer_body">
+				<div class="option_comm option_telecom">
+					<ul class="list_opt">
+						<li>
+							<button type="button" class="btn_opt">
+								<span class="info_opt">SKT</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_opt">
+								<span class="info_opt">KT</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_opt">
+								<span class="info_opt">LG U+</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_opt">
+								<span class="info_opt">SKT 알뜰폰</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_opt">
+								<span class="info_opt">KT 알뜰폰</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn_opt">
+								<span class="info_opt">LG U+ 알뜰폰</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<button type="button" class="btn_close">
+				<span class="ico_close">닫기</span>
+			</button>
+		</div>
+	</div>
+	<div class="p2p_layer p2p_layer_bottomsheet" style="display:none">
+		<div class="inner_layer">
+			<div class="layer_head">
+				<strong class="tit_layer">투게더펀딩 가입 동의</strong>
+			</div>
+			<div class="layer_body">
+				<div class="agree_kakaopay">
+					<div class="box_comm box_agree">
+						<div class="agree_comm agree_all">
+							<div class="item_chk">
+								<input type="checkbox" id="agreeAll" class="inp_g">
+								<label for="agreeAll" class="lab_g">
+									<span class="ico_p2p ico_check"></span>
+									<span class="txt_lab">약관에 모두 동의</span>
+								</label>
+							</div>
+						</div>
+						<div class="agree_comm agree_sub">
+							<div class="item_chk">
+								<input type="checkbox" id="inpAgree1" class="inp_g">
+								<label for="inpAgree1" class="lab_g">
+									<span class="ico_p2p ico_check2"></span>
+									<span class="txt_lab">투게더펀딩 이용 및 정보제공 동의</span>
+								</label>
+							</div>
+							<a href="#none" class="link_more">더보기</a>
+						</div>
+						<div class="agree_comm agree_sub">
+						<div class="item_chk">
+							<input type="checkbox" id="inpAgree2" class="inp_g">
+							<label for="inpAgree2" class="lab_g">
+								<span class="ico_p2p ico_check2"></span>
+								<span class="txt_lab">휴대폰 인증 동의</span>
+							</label>
+						</div>
+						<a href="#none" class="link_more">더보기</a>
+					</div>
+					<div class="agree_comm agree_sub">
+						<div class="item_chk">
+							<input type="checkbox" id="inpAgree3" class="inp_g">
+							<label for="inpAgree3" class="lab_g">
+								<span class="ico_p2p ico_check2"></span>
+								<span class="txt_lab">[선택] 마케팅 정보 활용 동의</span>
+							</label>
+						</div>
+						<a href="#none" class="link_more">더보기</a>
+					</div>
+					<div class="agree_comm agree_sub">
+						<div class="item_chk">
+							<input type="checkbox" id="inpAgree4" class="inp_g">
+							<label for="inpAgree4" class="lab_g">
+								<span class="ico_p2p ico_check2"></span>
+								<span class="txt_lab">[선택] 투게더펀딩 플러스친구 추가</span>
+							</label>
+						</div>
+						<a href="#none" class="link_more">더보기</a>
+					</div>
+					<div class="agree_comm agree_sub">
+						<div class="item_chk">
+							<input type="checkbox" id="inpAgree5" class="inp_g">
+							<label for="inpAgree5" class="lab_g">
+								<span class="ico_p2p ico_check2"></span>
+								<span class="txt_lab">[선택] 위치기반 서비스 이용 동의</span>
+							</label>
+						</div>
+						<a href="#none" class="link_more">더보기</a>
+					</div>
+					<div class="agree_comm agree_sub">
+						<div class="item_chk">
+							<input type="checkbox" id="inpAgree6" class="inp_g">
+							<label for="inpAgree6" class="lab_g">
+								<span class="ico_p2p ico_check2"></span>
+								<span class="txt_lab">[선택] 투자 광고 및 제안 동의</span>
+							</label>
+						</div>
+						<a href="#none" class="link_more">더보기</a>
+					</div>
+					<div class="agree_comm agree_sub">
+						<div class="item_chk">
+							<input type="checkbox" id="inpAgree7" class="inp_g">
+							<label for="inpAgree7" class="lab_g">
+								<span class="ico_p2p ico_check2"></span>
+								<span class="txt_lab">[선택] 안해도 되지만 그냥 하는 동의</span>
+							</label>
+						</div>
+						<a href="#none" class="link_more">더보기</a>
+					</div>
+				</div>
+				<div class="area_btn">
+					<button type="button" class="btn_g">확인</button>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn_close">
+			<span class="ico_close">닫기</span>
+		</button>
+	</div>
+</div>
+<div class="p2p_layer p2p_layer_modal p2p_layer_terms" style="display:none">
+	<div class="inner_layer">
+		<div class="layer_head">
+			<strong class="tit_layer">제 3자 정보제공 동의</strong>
+		</div>
+		<div class="layer_body">
+			<div class="terms_comm">
+				<p class="txt_terms">PF 대출이란? ( Project Finance )<br>
+					건축의 목적으로 쓰여지는 자금 대출의 용도로써 건축주나 사업주의 신용을 보지 않고 시행 프로젝트의 사업성과 수익성을 평가에 그 기준을 두는 금융상품.<br><br>
+					쉽게 말해서 PF 대출이란 주택담보대출이나, 신용대출 처럼 담보나 신용에 기준을 두지 않고 사업계획서, 즉 그 사업 프로젝트의 사업성과 가치를 보고 대출해주는 상품이라고 볼 수 있겠어요!<br><br>
+					※ PF대출이 사업성만 보고 대출이 떨어진다고 해서 금융기간에서 요하는 건축자금의 요건은 기본적인 신용등급(개인,법인)과 건축주나 사업주가 보유하고 있는 자산에 대한 평가를 전혀 무시하고 검토하지는 않아요, 참고해주세요!<br><br>
+					쉽게 말해서 PF대출이란 공사비 조달을 위한 운영자금 프로젝트 금융상품이라고 볼 수 있어요!</p>
+			</div>
+		</div>
+		<div class="layer_foot">
+			<button class="btn_comm">확인</button>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
