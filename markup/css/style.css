@@ -124,6 +124,7 @@ body{background: #222;}
 .accordion li .title .tit_txt::after{position: absolute; right: 10px; top: 1.4em; display: block; content: ""; width: 12px; height: 2px; background: #222; transition: all .3s; transform: rotate(180);}
 .accordion li .title .tit_txt::after{transform: rotate(90deg);}
 .accordion li .desc{display: none; padding: 10px 10px 0; text-align: center;}
+.accordion li.atv .title{font-weight: 700;}
 .accordion li.atv .title .tit_txt::before,
 .accordion li.atv .title .tit_txt::after{transform: rotate(0);}
 .accordion.faq03,
