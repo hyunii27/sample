@@ -1,3 +1,0 @@
-cd D:\03.test\css3_ex\scss
-
-sass --watch --style compact ex.scss:ex.css
