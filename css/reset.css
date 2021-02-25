@@ -102,6 +102,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .show{display: block !important;}
 .hide{display: none !important;}
 
+
 /* float */
 .float_right{float: right;}
 .float_left{float: left;}
