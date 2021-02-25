@@ -22,7 +22,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;}
 html, body, input, textarea, select, button, table, li, dd, p, b, span, em, strong{-webkit-text-size-adjust: none;}
-html{-ms-touch-action: none; font-family: "Noto Sans KR"; font-size: 16px; font-weight: 400; line-height: 1.1; letter-spacing: -0.025em; color: #222;}
+html{-ms-touch-action: none; font-family: "Noto Sans KR", sans-serif; font-size: 16px; font-weight: 400; line-height: 1.1; letter-spacing: -0.025em; color: #222;}
 body{-webkit-text-size-adjust: none;}
 html, body{width: 100%; height: 100%;}
 h1, h2, h3, h4, h5, h6{font-weight: 400; font-size: 1rem;}
@@ -39,8 +39,8 @@ img{/* width: 100%; */ font-size: 0; line-height: 0; vertical-align: top;}
 caption{visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
 legend, label span, .blind{visibility: hidden; overflow: hidden; position: absolute; left: 0; top: 0; margin: 0; padding: 0  !important;  width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important;}
 label{cursor: pointer;}
-pre{font-family: "Noto Sans KR"; white-space: pre-wrap; word-wrap: break-word;}
-button{display: inline-block; margin: 0; padding: 0; border: 0; background: none; text-align: center; cursor: pointer; vertical-align: top; font-family: "Noto Sans KR"; font-size: 0.875rem; line-height: 1.1; letter-spacing: -0.025em;}
+pre{font-family: "Noto Sans KR", sans-serif; white-space: pre-wrap; word-wrap: break-word;}
+button{display: inline-block; margin: 0; padding: 0; border: 0; background: none; text-align: center; cursor: pointer; vertical-align: top; font-family: "Noto Sans KR", sans-serif; font-size: 0.875rem; line-height: 1.1; letter-spacing: -0.025em;}
 button::-moz-focus-inner{margin: 0; padding: 0; border: 0;}
 input[type=text],
 input[type=password],
@@ -212,73 +212,73 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .pd90{padding: 90px !important;}
 .pd100{padding: 100px !important;}
 
-.pdt0{margin-top: 0 !important;}
-.pdt5{margin-top: 5px !important;}
-.pdt10{margin-top: 10px !important;}
-.pdt15{margin-top: 15px !important;}
-.pdt20{margin-top: 20px !important;}
-.pdt25{margin-top: 25px !important;}
-.pdt30{margin-top: 30px !important;}
-.pdt35{margin-top: 35px !important;}
-.pdt40{margin-top: 40px !important;}
-.pdt45{margin-top: 45px !important;}
-.pdt50{margin-top: 50px !important;}
-.pdt60{margin-top: 60px !important;}
-.pdt70{margin-top: 70px !important;}
-.pdt80{margin-top: 80px !important;}
-.pdt90{margin-top: 90px !important;}
-.pdt100{margin-top: 100px !important;}
+.pdt0{padding-top: 0 !important;}
+.pdt5{padding-top: 5px !important;}
+.pdt10{padding-top: 10px !important;}
+.pdt15{padding-top: 15px !important;}
+.pdt20{padding-top: 20px !important;}
+.pdt25{padding-top: 25px !important;}
+.pdt30{padding-top: 30px !important;}
+.pdt35{padding-top: 35px !important;}
+.pdt40{padding-top: 40px !important;}
+.pdt45{padding-top: 45px !important;}
+.pdt50{padding-top: 50px !important;}
+.pdt60{padding-top: 60px !important;}
+.pdt70{padding-top: 70px !important;}
+.pdt80{padding-top: 80px !important;}
+.pdt90{padding-top: 90px !important;}
+.pdt100{padding-top: 100px !important;}
 
-.pdr0{margin-right: 0 !important;}
-.pdr5{margin-right: 5px !important;}
-.pdr10{margin-right: 10px !important;}
-.pdr15{margin-right: 15px !important;}
-.pdr20{margin-right: 20px !important;}
-.pdr25{margin-right: 25px !important;}
-.pdr30{margin-right: 30px !important;}
-.pdr35{margin-right: 35px !important;}
-.pdr40{margin-right: 40px !important;}
-.pdr45{margin-right: 45px !important;}
-.pdr50{margin-right: 50px !important;}
-.pdr60{margin-right: 60px !important;}
-.pdr70{margin-right: 70px !important;}
-.pdr80{margin-right: 80px !important;}
-.pdr90{margin-right: 90px !important;}
-.pdr100{margin-right: 100px !important;}
+.pdr0{padding-right: 0 !important;}
+.pdr5{padding-right: 5px !important;}
+.pdr10{padding-right: 10px !important;}
+.pdr15{padding-right: 15px !important;}
+.pdr20{padding-right: 20px !important;}
+.pdr25{padding-right: 25px !important;}
+.pdr30{padding-right: 30px !important;}
+.pdr35{padding-right: 35px !important;}
+.pdr40{padding-right: 40px !important;}
+.pdr45{padding-right: 45px !important;}
+.pdr50{padding-right: 50px !important;}
+.pdr60{padding-right: 60px !important;}
+.pdr70{padding-right: 70px !important;}
+.pdr80{padding-right: 80px !important;}
+.pdr90{padding-right: 90px !important;}
+.pdr100{padding-right: 100px !important;}
 
-.pdb0{margin-bottom: 0 !important;}
-.pdb5{margin-bottom: 5px !important;}
-.pdb10{margin-bottom: 10px !important;}
-.pdb15{margin-bottom: 15px !important;}
-.pdb20{margin-bottom: 20px !important;}
-.pdb25{margin-bottom: 25px !important;}
-.pdb30{margin-bottom: 30px !important;}
-.pdb35{margin-bottom: 35px !important;}
-.pdb40{margin-bottom: 40px !important;}
-.pdb45{margin-bottom: 45px !important;}
-.pdb50{margin-bottom: 50px !important;}
-.pdb60{margin-bottom: 60px !important;}
-.pdb70{margin-bottom: 70px !important;}
-.pdb80{margin-bottom: 80px !important;}
-.pdb90{margin-bottom: 90px !important;}
-.pdb100{margin-bottom: 100px !important;}
+.pdb0{padding-bottom: 0 !important;}
+.pdb5{padding-bottom: 5px !important;}
+.pdb10{padding-bottom: 10px !important;}
+.pdb15{padding-bottom: 15px !important;}
+.pdb20{padding-bottom: 20px !important;}
+.pdb25{padding-bottom: 25px !important;}
+.pdb30{padding-bottom: 30px !important;}
+.pdb35{padding-bottom: 35px !important;}
+.pdb40{padding-bottom: 40px !important;}
+.pdb45{padding-bottom: 45px !important;}
+.pdb50{padding-bottom: 50px !important;}
+.pdb60{padding-bottom: 60px !important;}
+.pdb70{padding-bottom: 70px !important;}
+.pdb80{padding-bottom: 80px !important;}
+.pdb90{padding-bottom: 90px !important;}
+.pdb100{padding-bottom: 100px !important;}
 
-.pdl0{margin-left: 0 !important;}
-.pdl5{margin-left: 5px !important;}
-.pdl10{margin-left: 10px !important;}
-.pdl15{margin-left: 15px !important;}
-.pdl20{margin-left: 20px !important;}
-.pdl25{margin-left: 25px !important;}
-.pdl30{margin-left: 30px !important;}
-.pdl35{margin-left: 35px !important;}
-.pdl40{margin-left: 40px !important;}
-.pdl45{margin-left: 45px !important;}
-.pdl50{margin-left: 50px !important;}
-.pdl60{margin-left: 60px !important;}
-.pdl70{margin-left: 70px !important;}
-.pdl80{margin-left: 80px !important;}
-.pdl90{margin-left: 90px !important;}
-.pdl100{margin-left: 100px !important;}
+.pdl0{padding-left: 0 !important;}
+.pdl5{padding-left: 5px !important;}
+.pdl10{padding-left: 10px !important;}
+.pdl15{padding-left: 15px !important;}
+.pdl20{padding-left: 20px !important;}
+.pdl25{padding-left: 25px !important;}
+.pdl30{padding-left: 30px !important;}
+.pdl35{padding-left: 35px !important;}
+.pdl40{padding-left: 40px !important;}
+.pdl45{padding-left: 45px !important;}
+.pdl50{padding-left: 50px !important;}
+.pdl60{padding-left: 60px !important;}
+.pdl70{padding-left: 70px !important;}
+.pdl80{padding-left: 80px !important;}
+.pdl90{padding-left: 90px !important;}
+.pdl100{padding-left: 100px !important;}
 
 
 /* background color */
@@ -315,6 +315,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* font family */
 .opensans{font-family: "Open Sans", sans-serif !important;}
+.dohyeon{font-family: "Do Hyeon", sans-serif !important;}
 
 /* font weight */
 .font_bold{font-weight: 700 !important;}
@@ -336,7 +337,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .font15{font-size: 15px !important;}
 .font17{font-size: 17px !important; line-height: 1.12 !important;}
 .font18{font-size: 18px !important;}
-.font20{font-size: 20px !important; line-height: 0.75 !important;}
+.font20{font-size: 20px !important;}
 .font25{font-size: 25px !important; line-height: 1.32 !important;}
 
 /* font color */
