@@ -123,7 +123,7 @@ body{background: #222;}
 .accordion li .title .tit_txt::before,
 .accordion li .title .tit_txt::after{position: absolute; right: 10px; top: 1.4em; display: block; content: ""; width: 12px; height: 2px; background: #222; transition: all .3s; transform: rotate(180);}
 .accordion li .title .tit_txt::after{transform: rotate(90deg);}
-.accordion li .desc{display: none; padding: 10px 10px 0; text-align: center;}
+.accordion li .desc{display: none; padding: 10px; background: #f8f8f8;}
 .accordion li.atv .title{font-weight: 700;}
 .accordion li.atv .title .tit_txt::before,
 .accordion li.atv .title .tit_txt::after{transform: rotate(0);}
@@ -287,3 +287,9 @@ body{background: #222;}
 .nav .depth02 > li > a{padding: 0 10px; font-size: 14px;}
 .nav .depth02.atv{display: block !important;}
 .nav .depth02.show{display: block;}
+
+.location{font-size: 0;}
+.location > span{position: relative; display: inline-block; padding: 0 0 0 16px; font-size: 0.875rem;}
+.location > span::before{position: absolute; left: 8px; top: 6px; display: block; clear: both; content: ""; width: 1px; height: 10px; background: #1c0883;}
+.location > span:first-of-type{padding: 0;}
+.location > span:first-of-type::before{display: none;}
