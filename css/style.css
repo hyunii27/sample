@@ -257,10 +257,6 @@ body{background: #222;}
 .webfont .type{float: left; width: 32%; margin-left: 2%; line-height: 1.2;}
 .webfont .type > .inner{margin: 0 0 20px;}
 .webfont .type01{margin: 0;}
-.webfont .notosans{font-family: "Noto Sans KR", Sans-Serif;}
-.webfont .opensans{font-family: "Open Sans", Sans-Serif;}
-.webfont .dohyeon{font-family: "Do Hyeon", sans-serif;}
-.webfont .manrope{font-family: "Manrope", sans-serif;}
 .webfont .fw100{font-weight: 100;}
 .webfont .fw300{font-weight: 300;}
 .webfont .fw400{font-weight: 400;}
@@ -269,6 +265,7 @@ body{background: #222;}
 .webfont .fw700{font-weight: 700;}
 .webfont .fw800{font-weight: 800;}
 .webfont .fw900{font-weight: 900;}
+
 
 #gnb{overflow: hidden;}
 .nav{margin: 0 0 30px; border-bottom: 1px solid #ddd;}
@@ -287,6 +284,7 @@ body{background: #222;}
 .nav .depth02 > li > a{padding: 0 10px; font-size: 14px;}
 .nav .depth02.atv{display: block !important;}
 .nav .depth02.show{display: block;}
+
 
 .location{font-size: 0;}
 .location > span{position: relative; display: inline-block; padding: 0 0 0 16px; font-size: 0.875rem;}
