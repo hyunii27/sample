@@ -283,36 +283,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 
 /* background color */
-.bg_silver{background-color: #f1f1f1 !important;}
-.bg_silver02{background-color: #efefef !important;}
-.bg_silver03{background-color: #dddfe1 !important;}
+.bg_black{background-color: #000 !important;}
+.bg_white{background-color: #fff !important;}
+.bg_silver{background-color: #dddfe1 !important;}
 .bg_grey{background-color: #c5c5c5 !important;}
-.bg_grey02{background-color: #666 !important;}
-.bg_grey03{background-color: #999 !important;}
-.bg_royal{background-color: #1c0883 !important;}
+.bg_grey6{background-color: #666 !important;}
+.bg_grey9{background-color: #999 !important;}
 .bg_yellow{background-color: #ffb400 !important;}
 .bg_red{background-color: #fc2b2b !important;}
-.bg_purple{background-color: #6c41ff !important;}
-.bg_purple02{background-color: #1f1f97 !important;}
-.bg_blue{background-color: #3983fe !important;}
-.bg_blue02{background-color: #41abff !important;}
-.bg_blue03{background-color: #0569cc !important;}
+.bg_mint{background-color: #59c8a8 !important;}
 .bg_sky{background-color: #8acbff !important;}
+.bg_blue{background-color: #3983fe !important;}
+.bg_darkblue{background-color: #314994 !important;}
 .bg_royal{background-color: #1c0883 !important;}
+.bg_purple{background-color: #6c41ff !important;}
+
 
 /* border */
-.bd_color_dddfe1{border-color: #dddfe1;}
-.bt1{border-top: 1px solid #e3e3e3;}
-.bt2{border-top: 2px solid #e3e3e3;}
+.bd_color_dddfe1{border-color: #dddfe1 !important;}
+.bt1{border-top: 1px solid #e3e3e3 !important;}
+.bt2{border-top: 2px solid #e3e3e3 !important;}
+.bt2_black{border-top: 2px solid #000 !important;}
+.br1{border-right: 1px solid #e3e3e3 !important;}
+.br2{border-right: 2px solid #e3e3e3 !important;}
+.br2_black{border-right: 2px solid #000 !important;}
+.bb1{border-bottom: 1px solid #e3e3e3 !important;}
+.bb2{border-bottom: 2px solid #e3e3e3 !important;}
+.bb2_black{border-bottom: 2px solid #000 !important;}
+.bl1{border-left: 1px solid #e3e3e3 !important;}
+.bl2{border-left: 2px solid #e3e3e3 !important;}
+.bl2_black{border-left: 2px solid #000 !important;}
 
-.br1{border-right: 1px solid #e3e3e3;}
-.br2{border-right: 2px solid #e3e3e3;}
-
-.bb1{border-bottom: 1px solid #e3e3e3;}
-.bb2{border-bottom: 2px solid #e3e3e3;}
-
-.bl1{border-left: 1px solid #e3e3e3;}
-.bl2{border-left: 2px solid #e3e3e3;}
 
 /* font family */
 .opensans{font-family: "Open Sans", sans-serif !important;}
@@ -331,30 +332,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .right{text-align: right !important;}
 
 /* font size */
-.font11{font-size: 11px !important; line-height: 1.91 !important;}
-.font12{font-size: 12px !important; line-height: 1.75 !important;}
-.font13{font-size: 13px !important; line-height: 1.46 !important;}
+.font11{font-size: 11px !important;}
+.font12{font-size: 12px !important;}
+.font13{font-size: 13px !important;}
 .font14{font-size: 14px !important;}
 .font15{font-size: 15px !important;}
-.font17{font-size: 17px !important; line-height: 1.12 !important;}
+.font16{font-size: 16px !important;}
+.font17{font-size: 17px !important;}
 .font18{font-size: 18px !important;}
+.font19{font-size: 19px !important;}
 .font20{font-size: 20px !important;}
-.font25{font-size: 25px !important; line-height: 1.32 !important;}
+.font21{font-size: 21px !important;}
+.font22{font-size: 22px !important;}
+.font23{font-size: 23px !important;}
+.font24{font-size: 24px !important;}
+.font25{font-size: 25px !important;}
+.font26{font-size: 26px !important;}
+.font27{font-size: 27px !important;}
+.font28{font-size: 28px !important;}
+.font29{font-size: 29px !important;}
+.font30{font-size: 30px !important;}
 
 /* font color */
 .font_black{color: #000 !important;}
 .font_white{color: #fff !important;}
 .font_silver{color: #dddfe1 !important;}
 .font_grey{color: #c5c5c5 !important;}
-.font_grey02{color: #666 !important;}
-.font_grey03{color: #999 !important;}
+.font_grey6{color: #666 !important;}
+.font_grey9{color: #999 !important;}
 .font_yellow{color: #ffc300 !important;}
 .font_red{color: #fc2b2b !important;}
-.font_purple{color: #6c41ff !important;}
-.font_blue{color: #41abff !important;}
-.font_blue02{color: #3983fe !important;}
+.font_mint{color: #59c8a8 !important;}
 .font_sky{color: #8acbff !important;}
+.font_blue{color: #3983fe !important;}
+.font_darkblue{color: #314994 !important;}
 .font_royal{color: #1c0883 !important;}
+.font_purple{color: #6c41ff !important;}
 
 /* line height */
 .line_height_12{line-height: 1.2 !important;}
