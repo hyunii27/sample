@@ -14,6 +14,11 @@
 </head>
 	
 <body>
+<div id="skip">
+	<a href="#ex_contents">본문내용 바로가기</a>
+	<a href="#ex_nav">주메뉴 바로가기</a>
+</div>
+	
 <div class="ex_wrap">
     <header class="ex_header">
         <h1>
@@ -23,7 +28,7 @@
     </header>
 
     <div class="ex_container">
-        <nav class="ex_nav">
+        <nav class="ex_nav" id="ex_nav">
             <h2 class="blind">Markup list</h2>
             <ul class="ex_menu">
                 <li><a href="#form_field">form field</a></li>
@@ -41,7 +46,7 @@
             </ul> 
         </nav>
 
-        <div class="ex_contents">
+        <div class="ex_contents" id="ex_contents">
             <section id="form_field">
                 <h3>form field</h3>
                 <div class="ex_inner">
@@ -298,7 +303,7 @@
                         <div class="tab_con" id="tab03">
                             하나씩 열고 닫는 아코디언 메뉴
                             <ul class="accordion faq01">
-                                <li class="">
+                                <li>
                                     <div class="title">
                                         <a href="#" class="tit_txt">title</a>
                                     </div>
@@ -335,7 +340,7 @@
                         <div class="tab_con" id="tab04">
                             여러개 열고 닫는 아코디언 메뉴
                             <ul class="accordion faq02">
-                                <li class="">
+                                <li>
                                     <div class="title">
                                         <a href="#" class="tit_txt">title</a>
                                     </div>
@@ -383,36 +388,42 @@
                 <div class="ex_inner floating2">
                     <h4><span>하나만 열고 닫기</span></h4>
                     <ul class="accordion faq03">
-                        <li class="">
+                        <li>
                             <div class="title">
-                                <a href="#" class="tit_txt">title</a>
+                                <a href="#" class="tit_txt">location</a>
                             </div>
                             <div class="desc">
-                                111<br>desc<br>desc
+				<div class="location">
+					<span class="home"><a href="javascript:void(0);">home</a></span>
+					<span><a href="javascript:void(0);">자주 묻는 질문</a></span>
+				</div>
                             </div>
                         </li>
                         <li>
                             <div class="title">
-                                <a href="#" class="tit_txt">title</a>
+                                <a href="#" class="tit_txt">viewport</a>
                             </div>
                             <div class="desc">
-                                222<br>desc<br>desc
+<pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"&gt;
+</pre>
                             </div>
                         </li>
                         <li>
                             <div class="title">
-                                <a href="#" class="tit_txt">title</a>
+                                <a href="#" class="tit_txt">meta tag</a>
                             </div>
                             <div class="desc">
-                                333<br>desc<br>desc
-                            </div>
-                        </li>
-                        <li>
-                            <div class="title">
-                                <a href="#" class="tit_txt">title</a>
-                            </div>
-                            <div class="desc">
-                                444<br>desc<br>desc
+<pre>
+&lt;meta name="title" content="페이지 제목"&gt;
+&lt;meta name="description" content="페이지 설명글"&gt;
+&lt;meta name="keyword" content="페이지의 키워드"&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:url" content="링크될 URL"&gt;
+&lt;meta property="og:title" content="링크 제목, 카톡에서 가장 굵고 큰 글자"&gt;
+&lt;meta property="og:description" content="제목 아래 설명글"&gt;
+&lt;meta property="og:image" content="썸네일 이미지, 절대 주소 사용(https:// ~ )"&gt;
+</pre>
                             </div>
                         </li>
                     </ul>
@@ -421,12 +432,17 @@
                 <div class="ex_inner floating2">
                     <h4><span>여러개 열고 닫기</span></h4>
                     <ul class="accordion faq04">
-                        <li class="">
+                        <li>
                             <div class="title">
-                                <a href="#" class="tit_txt">title</a>
+                                <a href="#" class="tit_txt">media query</a>
                             </div>
                             <div class="desc">
-                                111<br>desc<br>desc
+				/* PC ~ tablet ver1 */ <br>
+				@media only screen and (min-width : 768px) and (max-width : 1220px) { } <br>
+				/* PC ~ tablet ver2 */ <br>
+				@media only screen and (max-width : 979px) { } <br>
+				/* mobile */ <br>
+                                @media only screen and (max-width: 768px) { }
                             </div>
                         </li>
                         <li>
@@ -434,7 +450,7 @@
                                 <a href="#" class="tit_txt">title</a>
                             </div>
                             <div class="desc">
-                                222<br>desc<br>desc
+                                222
                             </div>
                         </li>
                         <li>
@@ -442,15 +458,7 @@
                                 <a href="#" class="tit_txt">title</a>
                             </div>
                             <div class="desc">
-                                333<br>desc<br>desc
-                            </div>
-                        </li>
-                        <li>
-                            <div class="title">
-                                <a href="#" class="tit_txt">title</a>
-                            </div>
-                            <div class="desc">
-                                444<br>desc<br>desc
+                                333
                             </div>
                         </li>
                     </ul>
@@ -680,4 +688,3 @@
 </div>
 </body>
 </html>
-            
