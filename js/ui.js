@@ -112,6 +112,44 @@ $(function(){
 		slick_bg_chage($slick_current);
 	});
 	
+	//slider03
+	var slider03 = {
+		slideReview: function(){
+			var targetSlide = $(".slider03 .slide_box");
+			targetSlide.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				dots: true,
+				appendDots: targetSlide.siblings(".slider_indicator").addClass("type-title"),
+				customPaging: function(slider, i){
+					var i_title = $(slider.$slides[i]).attr("data-title");
+					
+					return "<button type='button'><span>" + i_title + "</span></button>";
+					//return "<button>" + i + "</button>";
+				}
+			});
+		},
+		init: function(){
+			var that = this;
+			this.slideReview();
+		}		
+	}
+	slider03.init();
+			
+	$(".slider03 .btn_play").click(function(){
+		$(this).parents(".slide_wrap").find(".slide_box").slick("slickPlay");
+		$(this).parents(".slider_indicator").removeClass("paused");
+		$(this).hide().siblings(".btn_pause").show();
+	});		
+	$(".slider03 .btn_pause").click(function(){
+		$(this).parents(".slide_wrap").find(".slide_box").slick("slickPause");
+		$(this).parents(".slider_indicator").addClass("paused");
+		$(this).hide().siblings(".btn_play").show();
+	});
+	
 	
 	/* gnb */
 	var $nav_wrap = $(".nav"),
