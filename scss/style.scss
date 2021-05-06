@@ -405,11 +405,11 @@ body{background: #222;}
 .box_type03{
     display: flex; height: 150px;
     .box{
-        position: relative; flex: 1; margin: 0 2px; height: 100%; border: $border_dddfe1; background: url(../img/thumb01.png) no-repeat 50% 0; background-size: cover; transform: skewX(5deg); transition: all .3s;
-        &.box02{background-image: url(../img/thumb02.png);}
-        &.box03{background-image: url(../img/thumb03.png);}
-        &.box04{background-image: url(../img/thumb04.png);}
-        &.box05{background-image: url(../img/thumb05.png);}
+        position: relative; flex: 1; margin: 0 2px; height: 100%; border: $border_dddfe1; background: url(../img/thumb01.jpg) no-repeat 50% 0; background-size: cover; transform: skewX(5deg); transition: all .3s;
+        &.box02{background-image: url(../img/thumb02.jpg);}
+        &.box03{background-image: url(../img/thumb03.jpg);}
+        &.box04{background-image: url(../img/thumb04.jpg);}
+        &.box05{background-image: url(../img/thumb05.jpg);}
         > p{position: absolute; left: 0; bottom: 0; padding: 10px; background: rgba(255, 223, 0, .7); color: $black; transform: rotate(-90deg); transform-origin: 17px 17px; transition: all .3s; font-size: $font12; text-transform: uppercase; white-space: nowrap; color: $white;}
         &:hover{
             flex: 5;
