@@ -279,6 +279,7 @@ function open_layer(){
     });
 	
 	close_layer();
+	close_layer_external();
 }
 function show_layer(obj){
     $("body").append("<div class='curtain'></div>").addClass("scroll_hidden");
@@ -301,6 +302,14 @@ function close_layer(){
     $(".layer .closelayer").on("click", function(){
         hide_layer("", ""); 
     });
+}
+function close_layer_external(){
+	$(document).mouseup(function(e){
+		var $layer_wrap = $(".layer_wrap");
+		
+		if ($layer_wrap.has(e.target).length === 0)
+			hide_layer();
+	});
 }
 
 
