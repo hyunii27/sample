@@ -17,8 +17,8 @@
 <div class="ex_wrap">
     <header class="ex_header">
         <h1>
-            <a href="css.html" class="atv" target="_blank">CSS</a>
-            <a href="markup.html">Markup</a>
+            <a href="css.html" class="atv">CSS</a>
+            <a href="markup.html" target="_blank">Markup</a>
         </h1>
     </header>
 
@@ -682,41 +682,8 @@
             <section id="svg">
                 <h3>svg</h3>
                 <div class="ex_inner">
-                    <h4><span>preserveAspectRatio</span></h4>
-                    <div class="smail">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 92">
-                            <defs>
-                                <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
-                            </defs>
-                            
-                            <!-- (width>height) meet -->
-                            <svg preserveAspectRatio="xMidYMid meet"  x="0"   y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMinYMid meet"  x="25"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMaxYMid meet"  x="50"  y="0"  viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
-
-                            <!-- (width>height) slice -->
-                            <svg preserveAspectRatio="xMidYMin slice" x="0"   y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMidYMid slice" x="25"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMidYMax slice" x="50"  y="15" viewBox="0 0 100 100" width="20"  height="10"><use href="#smiley" /></svg>
-
-                            <!-- (width<height) meet -->
-                            <svg preserveAspectRatio="xMidYMin meet"  x="75"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMidYMid meet"  x="90"  y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMidYMax meet"  x="105" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
-
-                            <!-- (width<height) slice -->
-                            <svg preserveAspectRatio="xMinYMid slice" x="120" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMidYMid slice" x="135" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
-                            <svg preserveAspectRatio="xMaxYMid slice" x="150" y="0"  viewBox="0 0 100 100" width="10"  height="25"><use href="#smiley" /></svg>
-
-                            <!-- none -->
-                            <svg preserveAspectRatio="none"           x="0"   y="30" viewBox="0 0 100 100" width="160" height="60"><use href="#smiley" /></svg>
-                        </svg>
-                    </div>
-                </div>
-                <div class="ex_inner">
                     <h4><span>snow</span></h4>
-                    <!--<div class="snow_box">
+                    <div class="snow_box">
                         <div class="snow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
                                 <g fill="#fff" fill-opacity=".15" transform="translate(55 42)">
@@ -790,7 +757,7 @@
                             </svg>
                         </div>
                         <div class="txt">svg snow</div>
-                    </div>-->
+                    </div>
                 </div>
             </section>
 
