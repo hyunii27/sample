@@ -191,6 +191,7 @@ $(function(){
 	
 	open_layer();
 	fixed_btm_box();
+	open_tab();
 });
 
 
@@ -251,6 +252,15 @@ function tab_box(tabs, tab_contents){
             e.preventDefault();
         });
     });
+}
+
+/* tab - 같은 페이지 내 탭 열기 ex. button 클릭 시 */
+function open_tab(clicked_tab, target){
+	$(clicked_tab).trigger("click");
+	setTimeout(function(){
+		$(target).trigger("click");
+	}, 300);
+	return false;
 }
 
 
