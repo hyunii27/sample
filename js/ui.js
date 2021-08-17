@@ -191,7 +191,6 @@ $(function(){
 	
 	open_layer();
 	fixed_btm_box();
-	open_tab();
 });
 
 
