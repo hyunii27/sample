@@ -466,4 +466,10 @@ body { background: #222; }
 
 .moon { margin: -10px 0 0 -8px; width: 40px; height: 40px; border-radius: 50%; background: #fff; box-shadow: 10px 8px 0 0 #222; }
 
+.linear_box::after { display: block; clear: both; content: ""; }
+.linear_box li { float: left; margin: 0 0 10px 10px; width: calc((100% - 40px) / 4); border: 1px solid #e3e3e3; transition: all .1s linear; line-height: 50px; text-align: center; }
+
+@media screen and (max-width: 1400px) { .linear_box li { width: calc((100% - 40px) / 3); } }
+@media screen and (max-width: 1200px) { .linear_box li { width: calc((100% - 40px) / 2); } }
+
 /*# sourceMappingURL=style.css.map */
